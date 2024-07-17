@@ -29,6 +29,7 @@ section,
 nav {
   width: 75%;
   margin: 0 auto;
+  margin-bottom: 4rem;
 }
 
 .display-flex {
@@ -54,7 +55,7 @@ button {
   font-weight: 600;
   background-color: var(--primary-color);
   padding: 1rem 2.5rem;
-  border-radius: 2.6rem;
+  border-radius: 2.75rem;
   border: 0;
 }
 
@@ -64,7 +65,7 @@ button {
   font-weight: 600;
   background-color: var(--primary-color);
   padding: 1rem 2.5rem;
-  border-radius: 2.6rem;
+  border-radius: 2.75rem;
   border: 0;
 }
 
@@ -72,7 +73,7 @@ button {
   font-size: 1.125rem;
   font-weight: 600;
   padding: 1rem 2.5rem;
-  border-radius: 2.6rem;
+  border-radius: 2.75rem;
   border: 1px solid white;
   background: none;
 }
@@ -80,8 +81,7 @@ button {
 /* Header styles */
 
 header {
-  outline: var(--out);
-  background: linear-gradient(180deg, rgb(17, 17, 17), rgba(119, 119, 119, 0) 100%);
+  background: linear-gradient(180deg, rgb(14, 14, 14) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 /* Nav bar styles */
@@ -98,8 +98,8 @@ header {
   padding: 4px;
 }
 
-.logo {
-  font-size: 2.25rem;
+.logo * {
+  font-size: 2.5rem;
   font-style: italic;
   color: var(--primary-color);
 }
@@ -137,32 +137,100 @@ header {
 #banner {
   margin-top: 5rem;
   gap: 5rem;
-  outline: var(--out);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-
-#banner > div {
-  outline: var(--out);
 }
 
 .banner-title {
   font-size: 4.75rem;
   font-weight: 900;
-  line-height: 110%;
+  line-height: 120%;
   margin-bottom: 1.5rem;
 }
 
 .banner-title .fancy-text {
   font-family: "Miama", sans-serif;
   font-weight: 400;
-  font-size: 8rem;
+  font-size: 9rem;
 }
 
 .btn-container {
   margin-top: 1.75rem;
   display: flex;
   gap: 0.85rem;
+}
+
+.banner-img {
+  justify-self: end;
+  position: relative;
+}
+
+.banner-img img {
+  max-width: 100%;
+}
+
+.banner-tile {
+  background: rgba(48, 48, 48, 0.5);
+  padding: 1.25rem 1.5rem;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Learned by Googling */
+  /* How to add blur */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.tile-1 {
+  position: absolute;
+  bottom: 4.5rem;
+  left: -6.5rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.tile-1 .tile-icon {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  height: 2.25rem;
+  width: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 1.2;
+}
+
+.tile-1 .tile-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.tile-1 .tile-text {
+  font-size: 1rem;
+  color: rgba(239, 237, 232, 0.65);
+  letter-spacing: 0.5px;
+}
+
+.tile-2 {
+  position: absolute;
+  top: 8rem;
+  right: -2rem;
+}
+
+.tile-2 .tile-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+
+.tile-2 .tile-text {
+  color: rgba(239, 237, 232, 0.65);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
 }
 
 /* Media query for Mobile Device */
@@ -174,6 +242,19 @@ header {
     width: 90%;
   }
 
+  .btn-primary {
+    display: none;
+  }
+
+  .btn-primary-phone {
+    padding: 1rem 1.5rem;
+    display: inline-block;
+  }
+
+  .btn-secondary {
+    padding: 1rem 1.5rem;
+  }
+
   /* Nav bar styles */
   .nav-link-container {
     display: none;
@@ -182,5 +263,47 @@ header {
   .hamburger-icon {
     display: block;
     scale: 1.5;
+  }
+
+  /* Banner styles */
+  #banner {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+    width: 60%;
+  }
+
+  .banner-content .description {
+    width: 70%;
+  }
+
+  .banner-title .fancy-text {
+    font-size: 4.5rem;
+  }
+
+  .btn-container {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1.75rem;
+  }
+
+  .banner-img {
+    justify-self: center;
+  }
+
+  .banner-tile {
+    scale: 0.7;
+  }
+
+  .tile-1 {
+    top: 50%;
+    left: 0.5rem;
+  }
+
+  .tile-2 {
+    top: 2rem;
+    right: -1.5rem;
   }
 }
