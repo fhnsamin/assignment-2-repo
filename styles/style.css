@@ -20,6 +20,11 @@ body {
   color: #ffffff;
 }
 
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
 section,
 nav {
   width: 75%;
@@ -30,16 +35,54 @@ nav {
   display: flex;
 }
 
+.tc {
+  text-align: center;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-primary {
+  font-size: 1.125rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  padding: 1rem 2.5rem;
+  border-radius: 2.6rem;
+  border: 0;
+}
+
+.btn-primary-phone {
+  display: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  padding: 1rem 2.5rem;
+  border-radius: 2.6rem;
+  border: 0;
+}
+
+.btn-secondary {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 2.6rem;
+  border: 1px solid white;
+  background: none;
+}
+
 /* Header styles */
 
 header {
+  outline: var(--out);
   background: linear-gradient(180deg, rgb(17, 17, 17), rgba(119, 119, 119, 0) 100%);
 }
-
-/* .style-font {
-  font-family: "Miama", sans-serif;
-  font-size: 4rem;
-} */
 
 /* Nav bar styles */
 
@@ -64,7 +107,7 @@ header {
 .nav-links {
   list-style: none;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: center;
 }
 .nav-item {
@@ -89,14 +132,49 @@ header {
   text-decoration: none;
 }
 
+/* Banner styles */
+
+#banner {
+  margin-top: 5rem;
+  gap: 5rem;
+  outline: var(--out);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#banner > div {
+  outline: var(--out);
+}
+
+.banner-title {
+  font-size: 4.75rem;
+  font-weight: 900;
+  line-height: 110%;
+  margin-bottom: 1.5rem;
+}
+
+.banner-title .fancy-text {
+  font-family: "Miama", sans-serif;
+  font-weight: 400;
+  font-size: 8rem;
+}
+
+.btn-container {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 0.85rem;
+}
+
 /* Media query for Mobile Device */
 
 @media screen and (max-width: 576px) {
+  /* Shared Styles */
   section,
   nav {
     width: 90%;
   }
 
+  /* Nav bar styles */
   .nav-link-container {
     display: none;
   }
