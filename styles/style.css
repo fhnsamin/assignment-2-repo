@@ -27,6 +27,7 @@ body * {
 
 section,
 nav {
+  max-width: 1440px;
   width: 75%;
   margin: 0 auto;
   margin-bottom: 4rem;
@@ -38,6 +39,11 @@ nav {
 
 .tc {
   text-align: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .description {
@@ -55,7 +61,7 @@ button {
   font-weight: 600;
   background-color: var(--primary-color);
   padding: 1rem 2.5rem;
-  border-radius: 2.75rem;
+  border-radius: 2.8rem;
   border: 0;
 }
 
@@ -65,7 +71,7 @@ button {
   font-weight: 600;
   background-color: var(--primary-color);
   padding: 1rem 2.5rem;
-  border-radius: 2.75rem;
+  border-radius: 2.8rem;
   border: 0;
 }
 
@@ -233,6 +239,13 @@ header {
   letter-spacing: 0.5px;
 }
 
+/* Change Habits section styles */
+
+#change-habits .section-details {
+  width: 65%;
+  margin: 0 auto;
+}
+
 /* Media query for Mobile Device */
 
 @media screen and (max-width: 576px) {
@@ -247,11 +260,14 @@ header {
   }
 
   .btn-primary-phone {
-    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
     display: inline-block;
+    min-width: fit-content;
   }
 
   .btn-secondary {
+    font-size: 1rem;
     padding: 1rem 1.5rem;
   }
 
