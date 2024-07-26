@@ -48,7 +48,7 @@ nav {
 
 .description {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 1rem;
+  font-size: 0.875rem;
   letter-spacing: 0.5px;
 }
 
@@ -242,8 +242,32 @@ header {
 /* Change Habits section styles */
 
 #change-habits .section-details {
-  width: 65%;
+  width: 60%;
   margin: 0 auto;
+  margin-bottom: 3.25rem;
+}
+
+.exercise-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.exercise-card {
+  justify-self: center;
+  text-align: center;
+}
+
+.exercise-img {
+  border-radius: 50%;
+  border: 0.4rem solid #191919;
+  margin-bottom: 1.8rem;
+}
+
+.exercise-title {
+  font-size: 1.125rem;
+  margin-bottom: 0.4rem;
 }
 
 /* Media query for Mobile Device */
@@ -321,5 +345,22 @@ header {
   .tile-2 {
     top: 2rem;
     right: -1.5rem;
+  }
+
+  /* Change Habits section styles */
+  #change-habits .section-details {
+    width: 100%;
+  }
+
+  #change-habits .section-title {
+    font-size: 2rem;
+  }
+
+  .exercise-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-card {
+    width: 70%;
   }
 }
