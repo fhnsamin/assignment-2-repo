@@ -49,7 +49,8 @@ nav {
 .description {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.875rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  line-height: 1.5rem;
 }
 
 button {
@@ -58,26 +59,20 @@ button {
 
 .btn-primary {
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 500;
   background-color: var(--primary-color);
   padding: 1rem 2.5rem;
   border-radius: 2.8rem;
   border: 0;
 }
 
-.btn-primary-phone {
+.phone {
   display: none;
-  font-size: 1.125rem;
-  font-weight: 600;
-  background-color: var(--primary-color);
-  padding: 1rem 2.5rem;
-  border-radius: 2.8rem;
-  border: 0;
 }
 
 .btn-secondary {
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 500;
   padding: 1rem 2.5rem;
   border-radius: 2.75rem;
   border: 1px solid white;
@@ -160,7 +155,7 @@ header {
   font-size: 9rem;
 }
 
-.btn-container {
+#banner .btn-container {
   margin-top: 1.75rem;
   display: flex;
   gap: 0.85rem;
@@ -270,6 +265,32 @@ header {
   margin-bottom: 0.4rem;
 }
 
+/* Run Extra Mile section styles */
+
+#running {
+  background-color: #222;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  padding-left: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10rem;
+  align-items: center;
+}
+
+#running .details-container {
+  width: 70%;
+}
+
+#running .details-container .btn-primary {
+  margin-top: 2rem;
+}
+
+#running .section-img img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
 /* Media query for Mobile Device */
 
 @media screen and (max-width: 576px) {
@@ -279,19 +300,26 @@ header {
     width: 90%;
   }
 
-  .btn-primary {
+  .desktop {
     display: none;
   }
 
-  .btn-primary-phone {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
     font-size: 1rem;
+  }
+
+  .btn-primary + .phone {
     padding: 1rem 2rem;
     display: inline-block;
     min-width: fit-content;
   }
 
   .btn-secondary {
-    font-size: 1rem;
     padding: 1rem 1.5rem;
   }
 
@@ -362,5 +390,23 @@ header {
 
   .exercise-card {
     width: 70%;
+  }
+
+  /* Run Extra Mile section styles */
+  #running {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+    padding: 1.5rem 0;
+  }
+
+  #running .details-container,
+  .section-img {
+    width: 87%;
+    /* padding: 2rem 0; */
+  }
+
+  #running .btn-primary {
+    width: 100%;
   }
 }
