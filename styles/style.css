@@ -11,7 +11,7 @@
 
 :root {
   --primary-color: #e6533c;
-  --out: 2px dashed teal;
+  --out: 2px dashed turquoise;
 }
 
 body {
@@ -64,6 +64,7 @@ button {
   padding: 1rem 2.5rem;
   border-radius: 2.8rem;
   border: 0;
+  width: 50%;
 }
 
 .phone {
@@ -77,6 +78,7 @@ button {
   border-radius: 2.75rem;
   border: 1px solid white;
   background: none;
+  width: 50%;
 }
 
 /* Header styles */
@@ -99,7 +101,7 @@ header {
   padding: 4px;
 }
 
-.logo * {
+.logo {
   font-size: 2.5rem;
   font-style: italic;
   color: var(--primary-color);
@@ -291,6 +293,129 @@ header {
   border-radius: 1rem;
 }
 
+/* Meet Our Team section styles */
+.team-member-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #222;
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
+
+.member-1 {
+  background-image: url(../images/trainer1.png);
+}
+.member-2 {
+  background-image: url(../images/trainer2.png);
+}
+.member-3 {
+  background-image: url(../images/trainer3.png);
+}
+.member-4 {
+  background-image: url(../images/trainer4.png);
+}
+.member-5 {
+  background-image: url(../images/trainer5.png);
+}
+.member-6 {
+  background-image: url(../images/trainer6.png);
+}
+
+.team-member-card {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay;
+}
+
+.member-detail {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.member-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.member-occupation {
+  font-size: 0.875rem;
+  opacity: 50%;
+  margin-top: 0.25rem;
+}
+
+/* Footer styles */
+footer {
+  background-color: #222;
+}
+
+section.footer-elements {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr;
+  gap: 3rem;
+  padding: 4rem 0;
+  margin-bottom: 0;
+}
+
+.footer-info {
+  width: 85%;
+}
+
+#styled-text {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-style: italic;
+  font-weight: 900;
+}
+
+.footer-logo {
+  font-size: 4.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.links-heading {
+  font-size: 1.675rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+ul.link-chart {
+  list-style: none;
+  margin-top: 2.5rem;
+}
+
+ul.link-chart li {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  opacity: 50%;
+}
+
+ul.link-chart a {
+  text-decoration: none;
+}
+
+footer hr {
+  width: 75%;
+  max-width: 1440px;
+  margin: auto;
+  opacity: 10%;
+}
+
+.footer-text {
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+  opacity: 50%;
+  padding: 2rem 0;
+}
+
 /* Media query for Mobile Device */
 
 @media screen and (max-width: 576px) {
@@ -352,7 +477,7 @@ header {
   }
 
   .btn-container {
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
     margin-top: 1.75rem;
   }
@@ -408,5 +533,24 @@ header {
 
   #running .btn-primary {
     width: 100%;
+  }
+
+  /* Meet Our Team section styles */
+  .team-member-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer styles */
+  section.footer-elements {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .footer-info {
+    width: 100%;
+  }
+
+  footer hr {
+    width: 90%;
   }
 }
