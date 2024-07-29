@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.cdnfonts.com/css/miama");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 * {
   margin: 0;
@@ -356,70 +357,6 @@ header {
   margin-top: 0.25rem;
 }
 
-/* Footer styles */
-footer {
-  background-color: #222;
-}
-
-section.footer-elements {
-  display: grid;
-  grid-template-columns: 5fr 2fr 2fr;
-  gap: 3rem;
-  padding: 4rem 0;
-  margin-bottom: 0;
-}
-
-.footer-info {
-  width: 85%;
-}
-
-#styled-text {
-  font-size: 1rem;
-  color: var(--primary-color);
-  font-style: italic;
-  font-weight: 900;
-}
-
-.footer-logo {
-  font-size: 4.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.links-heading {
-  font-size: 1.675rem;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-ul.link-chart {
-  list-style: none;
-  margin-top: 2.5rem;
-}
-
-ul.link-chart li {
-  font-size: 1.25rem;
-  margin-bottom: 1.25rem;
-  opacity: 50%;
-}
-
-ul.link-chart a {
-  text-decoration: none;
-}
-
-footer hr {
-  width: 75%;
-  max-width: 1440px;
-  margin: auto;
-  opacity: 10%;
-}
-
-.footer-text {
-  font-size: 1.25rem;
-  letter-spacing: 0.3px;
-  opacity: 50%;
-  padding: 2rem 0;
-}
-
 /* Calculate BMI section styles */
 #calculate-bmi .details-container {
   width: 60%;
@@ -531,6 +468,151 @@ select[name="activity"] {
 button[type="submit"] {
   width: 80%;
   margin-top: 3rem;
+}
+
+/* Pricing Plan section styles */
+.pricing-card-container {
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.pricing-card {
+  background-color: #1e1e1e;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  width: 90%;
+}
+
+.pricing-card .card-tier {
+  font-size: 2.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 1px;
+}
+
+.pricing-card .tier-price {
+  font-size: 3rem;
+  margin: 2rem auto;
+  border: 1px solid var(--primary-color);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #222;
+}
+
+.tier-price sub {
+  font-size: 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 3px;
+  opacity: 0.8;
+}
+
+.tier-benefits {
+  width: 70%;
+  margin: 3rem auto;
+}
+
+ul.benefit-list li {
+  list-style: square;
+  margin: 1rem;
+}
+
+ul.benefit-list li::marker {
+  color: var(--primary-color);
+  font-size: 1.5em;
+}
+
+.purchase-btn-container {
+  min-width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.purchase-btn {
+  min-width: fit-content;
+}
+
+.gold-btn {
+  scale: 1.1;
+}
+
+.pricing-card + .gold-card {
+  background-color: #1d3937;
+  scale: 1.1;
+  position: relative;
+}
+
+img.popular {
+  position: absolute;
+  top: -4rem;
+  left: -8rem;
+  rotate: -45deg;
+  scale: 0.7;
+}
+
+/* Footer styles */
+footer {
+  background-color: #222;
+}
+
+section.footer-elements {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr;
+  gap: 3rem;
+  padding: 4rem 0;
+  margin-bottom: 0;
+}
+
+.footer-info {
+  width: 85%;
+}
+
+#styled-text {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-style: italic;
+  font-weight: 900;
+}
+
+.footer-logo {
+  font-size: 4.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.links-heading {
+  font-size: 1.675rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+ul.link-chart {
+  list-style: none;
+  margin-top: 2.5rem;
+}
+
+ul.link-chart li {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  opacity: 50%;
+}
+
+ul.link-chart a {
+  text-decoration: none;
+}
+
+footer hr {
+  width: 75%;
+  max-width: 1440px;
+  margin: auto;
+  opacity: 10%;
+}
+
+.footer-text {
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  opacity: 50%;
+  padding: 2rem 0;
 }
 
 /* Media query for Mobile Device */
@@ -657,20 +739,6 @@ button[type="submit"] {
     grid-template-columns: 1fr;
   }
 
-  /* Footer styles */
-  section.footer-elements {
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-  }
-
-  .footer-info {
-    width: 100%;
-  }
-
-  footer hr {
-    width: 90%;
-  }
-
   /* Calculate BMI section styles */
   #calculate-bmi .details-container {
     width: 100%;
@@ -694,5 +762,50 @@ button[type="submit"] {
     width: 90%;
     margin: 0 auto;
     margin-top: 2rem;
+  }
+
+  /* Pricing Plan section style */
+  .pricing-card-container {
+    grid-template-columns: 1fr;
+    scale: 0.9;
+    gap: 4rem;
+    margin: 0rem auto;
+  }
+
+  .gold-card {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  img.popular {
+    left: -7rem;
+    scale: 0.8;
+  }
+
+  /* Footer styles */
+  section.footer-elements {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .footer-info {
+    width: 100%;
+  }
+
+  footer hr {
+    width: 90%;
+  }
+
+  .links-heading {
+    font-size: 1.5rem;
+  }
+
+  ul.link-chart {
+    margin-top: 1.75rem;
+  }
+
+  ul.link-chart li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 }
