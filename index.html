@@ -112,6 +112,78 @@
     </section>
     <!-- Run Extra Mile section ends -->
 
+    <!-- BMI Calculator section starts -->
+    <section id="calculate-bmi">
+        <div class="details-container">
+            <h1 class="section-title">
+                BMI Calculator
+            </h1>
+            <p class="description ">Calculate your Body Mass Index to get a better idea of your current physique.</p>
+        </div>
+    </section>
+
+    <section id="bmi-calculator-container">
+        <div class="bmi-calculator">
+            <div class="bmi-chart">
+                <h2 class="bmi-heading">BMI Calculator Chart</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>BMI</th>
+                                <th>Weight Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Below 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 24.9</td>
+                                <td>Healthy</td>
+                            </tr>
+                            <tr>
+                                <td>25.0 - 29.9</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30.0 - and Above</td>
+                                <td>Obese</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bmi-form">
+                <h2 class="bmi-heading">Calculate Your BMI</h2>
+                <p class="description">Insert your information to calculate your BMI.</p>
+
+                <form class="input-form">
+                    <input type="number" inputmode="numeric" placeholder="Height/cm" name="height" id="" required>
+                    <input type="number" inputmode="numeric" placeholder="Weight/kg" name="weight" id="" required>
+                    <input type="number" inputmode="numeric" placeholder="Age" name="age" id="" required>
+                    <select name="sex" required>
+                        <option value="" disabled selected>Sex</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <select name="activity" required>
+                        <option value="" disabled selected>Select an activity factor</option>
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Lightly active</option>
+                        <option value="moderate">Moderately active</option>
+                        <option value="active">Active</option>
+                        <option value="very-active">Very active</option>
+                    </select>
+                    <button type="submit" class="btn-primary">Calculate</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- BMI Calculator section Ends -->
+
     <!-- Meet Our Team section starts -->
     <section id="our-team">
         <div class="details-container tc">
