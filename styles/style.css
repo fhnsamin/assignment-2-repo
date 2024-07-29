@@ -483,7 +483,8 @@ form.input-form {
   margin-top: 2rem;
 }
 
-/* Hiding arrow in input:number field */
+/* Hiding arrow in input:number field
+  Searched on google */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -498,8 +499,7 @@ input[type="number"] {
 
 form.input-form input,
 select {
-  padding: 0.875rem 0;
-  padding-left: 1.25rem;
+  padding: 0.875rem 1.25rem;
   background-color: #383838;
   outline: none;
   border: none;
@@ -514,7 +514,8 @@ form.input-form select {
 
 form.input-form input:focus,
 select:focus {
-  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.257);
 }
 
 form.input-form input::placeholder {
