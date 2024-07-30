@@ -13,10 +13,6 @@
   --out: 2px dashed turquoise;
 }
 
-.out {
-  outline: var(--out);
-}
-
 /* Shared styles */
 
 body {
@@ -366,7 +362,7 @@ header {
 
 #bmi-calculator-container {
   width: 100%;
-  max-width: 100lvw;
+  max-width: none;
   background-color: #222;
   padding: 3rem 0;
 }
@@ -498,7 +494,7 @@ button[type="submit"] {
   width: fit-content;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #222;
+  background-color: #111111;
 }
 
 .tier-price sub {
@@ -537,10 +533,12 @@ ul.benefit-list li::marker {
   scale: 1.1;
 }
 
-.pricing-card + .gold-card {
+.pricing-card.gold-card {
   background-color: #1d3937;
   scale: 1.1;
   position: relative;
+  outline: 4px solid var(--primary-color);
+  outline-offset: 4px;
 }
 
 img.popular {
@@ -637,7 +635,7 @@ footer hr {
     font-size: 1rem;
   }
 
-  .btn-primary + .phone {
+  .btn-primary.phone {
     padding: 1rem 2rem;
     display: inline-block;
     min-width: fit-content;
@@ -773,8 +771,7 @@ footer hr {
   }
 
   .gold-card {
-    grid-row-start: 1;
-    grid-column-start: 1;
+    order: -1;
   }
 
   img.popular {
